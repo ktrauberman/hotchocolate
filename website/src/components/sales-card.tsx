@@ -38,7 +38,7 @@ export const SalesCard: FunctionComponent<SalesCardProps> = ({
                 aria-hidden="true"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                   clip-rule="evenodd"
                 />
@@ -55,7 +55,7 @@ export const SalesCard: FunctionComponent<SalesCardProps> = ({
 const Container = styled.div`
   box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   border: 1px solid rgb(229, 231, 235);
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius);
 `;
 
 const TopHalf = styled.div`
@@ -64,7 +64,6 @@ const TopHalf = styled.div`
 
 const Name = styled.h2`
   margin: 0;
-  font-family: "Roboto", sans-serif;
   line-height: 1.5rem;
   font-size: 1.125rem;
   font-weight: 500;
@@ -73,7 +72,6 @@ const Name = styled.h2`
 
 const Description = styled.p`
   margin: 0;
-  font-family: "Roboto", sans-serif;
   color: rgb(107, 114, 128);
   margin-top: 1rem;
   font-size: 0.875rem;
@@ -82,7 +80,6 @@ const Description = styled.p`
 
 const PriceRow = styled.p`
   margin: 0;
-  font-family: "Roboto", sans-serif;
   margin-top: 2rem;
 `;
 
@@ -113,10 +110,10 @@ const Buy = styled.button`
   font-weight: 600;
   border: 1px solid transparent;
   border-radius: 0.375rem;
-  background-color: rgb(124, 58, 237);
+  background-color: var(--brand-color);
 
   :hover {
-    background-color: rgb(109, 40, 217);
+    background-color: var(--brand-color-hover);
   }
 `;
 
